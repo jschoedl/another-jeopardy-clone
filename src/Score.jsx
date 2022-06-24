@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Score({teamName, score}) {
+function Score({teamName, score, active}) {
     return (
         <>
-        <h3>{teamName}</h3>
-        <p className="score">{score}</p>
+            <h3 className={active ? "" : " inactive"}>{teamName}</h3>
+            <p className={"score" + (active ? "" : " inactive")}>{score}</p>
         </>
     );
 }

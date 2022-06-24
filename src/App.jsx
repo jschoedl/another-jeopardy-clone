@@ -20,7 +20,7 @@ function App() {
                 />
                 : <></>}
             <QuestionButtons setDisplayedQuestion={setDisplayedQuestion}/>
-            <TeamScores score0={score0} score1={score1}/>
+            <TeamScores score0={score0} score1={score1} currentTeam={currentTeam}/>
         </>
     )
 }

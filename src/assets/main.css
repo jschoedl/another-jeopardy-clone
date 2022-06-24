@@ -4,7 +4,7 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.7rem;
     margin: 0;
-    transition: background-color .5s;
+    transition: background-color .3s;
 }
 
 #root {
@@ -18,9 +18,13 @@ h2 {
     text-align: center;
 }
 
-p{
+p {
     text-align: center;
     padding-top: 1rem;
+}
+
+.inactive {
+    color: gray;
 }
 
 .container {
