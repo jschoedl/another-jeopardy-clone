@@ -5,14 +5,18 @@ export function useKeyPress(targetKey) {
     const [keyPressed, setKeyPressed] = useState(false);
 
     useEffect(() => {
-        const downHandler = ({key}) => {
-            if (key === targetKey)
+        const downHandler = (event) => {
+            if (event.key === targetKey){
                 setKeyPressed(true)
+                event.preventDefault()
+            }
         }
 
-        const upHandler = ({key}) => {
-            if (key === targetKey)
+        const upHandler = (event) => {
+            if (event.key === targetKey){
                 setKeyPressed(false)
+                event.preventDefault()
+            }
         }
 
         window.addEventListener("keydown", downHandler)
