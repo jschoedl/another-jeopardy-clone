@@ -13,14 +13,35 @@
     height: 100vh;
 }
 
+h2 {
+    padding: 0.3rem;
+    text-align: center;
+}
+
 .container {
     display: flex;
     justify-content: space-around;
 }
 
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
 #question-buttons {
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+#question-buttons > .container {
+    margin: 1rem;
 }
 
 .question-button {
@@ -54,14 +75,13 @@
     margin-top: -1rem;
 }
 
-.flex-1 {
-    flex: 1;
-}
-
-.flex-2 {
-    flex: 2;
-}
-
-.flex-3 {
-    flex: 3;
+#question{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
 }

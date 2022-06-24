@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Button({value}) {
+function Button({value, handleClick}) {
     return (
-        <button className="question-button">{value} €</button>
+        <button className="question-button" onClick={handleClick}>{value} €</button>
     );
 }
 

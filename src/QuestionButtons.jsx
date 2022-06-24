@@ -2,7 +2,7 @@ import React from 'react';
 import Button from "./Button";
 import questions from "./assets/questions.json"
 
-function QuestionButtons() {
+function QuestionButtons({setDisplayedQuestion}) {
     const questionsPerCategory = Math.max(
         ...Object.values(questions).map(categoryQuestions => Object.keys(categoryQuestions).length)
     )
@@ -13,7 +13,13 @@ function QuestionButtons() {
     for (let questionIndex = 0; questionIndex < questionsPerCategory; questionIndex++) {
         let questionButtons = []
         for (let [categoryName, categoryQuestions] of Object.entries(questions)) {
-            questionButtons.push(<Button key={categoryName} value={Object.keys(categoryQuestions)[questionIndex]}/>)
+            const [questionValue, questionText] = Object.entries(categoryQuestions)[questionIndex]
+            const handleButtonClick = () => setDisplayedQuestion({
+                "category": categoryName,
+                "value": questionValue,
+                "text": questionText
+            })
+            questionButtons.push(<Button key={categoryName} value={questionValue} handleClick={handleButtonClick}/>)
         }
         questionRows.push(<div className="container" key={questionIndex}>{questionButtons}</div>)
     }
