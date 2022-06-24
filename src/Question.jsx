@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useKeyPress} from "./lib/helpers";
 
-function Question({displayedQuestion, setDisplayedQuestion}) {
+function Question({displayedQuestion, setDisplayedQuestion, switchTeams, increaseScore}) {
     const {category, value, question} = displayedQuestion;
     const [questionText, answerText] = question || ["", ""]
 
@@ -13,28 +13,33 @@ function Question({displayedQuestion, setDisplayedQuestion}) {
     const arrowUpPressed = useKeyPress("ArrowUp")
     const arrowDownPressed = useKeyPress("ArrowDown")
 
+    const applyAnswer = () => {
+        setAnswerVisible(false)
+        setDisplayedQuestion({})
+        setBackgroundColor("")
+
+        increaseScore(Number(scoreChange))
+        setScoreChange(0)
+        switchTeams()
+    }
+
     useEffect(() => {
-        if (spacePressed) {
-            console.log(answerVisible)
+        if (spacePressed)
             if (!answerVisible && !backgroundColor)
                 setAnswerVisible(true)
-            else if (backgroundColor) {
-                setAnswerVisible(false)
-                setDisplayedQuestion({})
-                setBackgroundColor("")
-            }
-        }
+            else if (backgroundColor)
+                applyAnswer()
     }, [backgroundColor, setDisplayedQuestion, spacePressed])
 
     useEffect(() => {
-        if (arrowUpPressed) {
+        if (answerVisible && arrowUpPressed) {
             setBackgroundColor("#cefdbc")
             setScoreChange(value)
         }
     }, [arrowUpPressed, value])
 
     useEffect(() => {
-        if (arrowDownPressed) {
+        if (answerVisible && arrowDownPressed) {
             setBackgroundColor("#fdbcbc")
             setScoreChange(-value)
         }
@@ -42,13 +47,11 @@ function Question({displayedQuestion, setDisplayedQuestion}) {
 
 
     return (
-        Object.keys(displayedQuestion).length
-            ? <div id="question" style={{backgroundColor: backgroundColor}}>
-                <h1>{category} · {value}€</h1>
-                <p>{questionText}</p>
-                {answerVisible ? <p>{answerText}</p> : <></>}
-            </div>
-            : <></>
+        <div id="question" style={{backgroundColor: backgroundColor}}>
+            <h1>{category} · {value}€</h1>
+            <p>{questionText}</p>
+            {answerVisible ? <p>{answerText}</p> : <></>}
+        </div>
     )
 }
 

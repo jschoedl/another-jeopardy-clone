@@ -1,14 +1,14 @@
 import React from 'react';
 import Score from "./Score";
 
-function TeamScores() {
+function TeamScores({score0, score1}) {
     return (
         <div id="scores" className="container flex-1">
             <div className="row">
-                <Score teamName="Team 1" score={10200}/>
+                <Score teamName="Team 1" score={score0}/>
             </div>
             <div className="row">
-                <Score teamName="Team 2" score={0}/>
+                <Score teamName="Team 2" score={score1}/>
             </div>
         </div>
     );
