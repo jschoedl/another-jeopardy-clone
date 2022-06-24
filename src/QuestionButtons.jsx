@@ -14,12 +14,14 @@ function QuestionButtons({setDisplayedQuestion}) {
         let questionButtons = []
         for (let [categoryName, categoryQuestions] of Object.entries(questions)) {
             const [questionValue, questionText] = Object.entries(categoryQuestions)[questionIndex]
-            const handleButtonClick = () => setDisplayedQuestion({
+            const associatedQuestion = {
                 "category": categoryName,
                 "value": questionValue,
                 "question": questionText
-            })
-            questionButtons.push(<Button key={categoryName} value={questionValue} handleClick={handleButtonClick}/>)
+            }
+            questionButtons.push(<Button key={categoryName} value={questionValue} question={associatedQuestion}
+                                         setDisplayedQuestion={setDisplayedQuestion}
+            />)
         }
         questionRows.push(<div className="container" key={questionIndex}>{questionButtons}</div>)
     }
