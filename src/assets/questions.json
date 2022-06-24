@@ -1,17 +1,17 @@
 {
   "Category 1": {
-    "200": "This is a question. Lorem ipsum dolor sit amet.",
-    "400": "And another question! Consectetur adipiscing elit.",
-    "600": "Third question! Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "200": ["This is a question. Lorem ipsum dolor sit amet.", "correct answer"],
+    "400": ["And another question! Consectetur adipiscing elit.", "another answer"],
+    "600": ["Third question! Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "third answer"]
   },
   "Category 2": {
-    "200": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-    "400": "Nullam id dolor id nibh ultricies vehicula ut id elit.",
-    "600": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "200": ["Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.", "answer"],
+    "400": ["Nullam id dolor id nibh ultricies vehicula ut id elit.", "answer"],
+    "600": ["Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", "answer"]
   },
   "Category 3": {
-    "200": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "400": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "600": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "200": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.", "answer"],
+    "400": ["Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "answer"],
+    "600": ["Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "answer"]
   }
 }

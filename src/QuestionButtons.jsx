@@ -17,7 +17,7 @@ function QuestionButtons({setDisplayedQuestion}) {
             const handleButtonClick = () => setDisplayedQuestion({
                 "category": categoryName,
                 "value": questionValue,
-                "text": questionText
+                "question": questionText
             })
             questionButtons.push(<Button key={categoryName} value={questionValue} handleClick={handleButtonClick}/>)
         }
