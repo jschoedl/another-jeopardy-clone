@@ -29,6 +29,7 @@ function Question({displayedQuestion, setDisplayedQuestion, switchTeams, increas
                 setAnswerVisible(true)
             else if (backgroundColor)
                 applyAnswer()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [backgroundColor, setDisplayedQuestion, spacePressed])
 
     useEffect(() => {
@@ -36,6 +37,7 @@ function Question({displayedQuestion, setDisplayedQuestion, switchTeams, increas
             setBackgroundColor("#cefdbc")
             setScoreChange(value)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [arrowUpPressed, value])
 
     useEffect(() => {
@@ -43,6 +45,7 @@ function Question({displayedQuestion, setDisplayedQuestion, switchTeams, increas
             setBackgroundColor("#fdbcbc")
             setScoreChange(-value)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [arrowDownPressed, value])
 
 
