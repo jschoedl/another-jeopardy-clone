@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/another-jeopardy-clone/static/css/main.204aa24e.css",
+    "main.css": "/another-jeopardy-clone/static/css/main.369bea17.css",
     "main.js": "/another-jeopardy-clone/static/js/main.5138c72e.js",
     "index.html": "/another-jeopardy-clone/index.html",
-    "main.204aa24e.css.map": "/another-jeopardy-clone/static/css/main.204aa24e.css.map",
+    "main.369bea17.css.map": "/another-jeopardy-clone/static/css/main.369bea17.css.map",
     "main.5138c72e.js.map": "/another-jeopardy-clone/static/js/main.5138c72e.js.map"
   },
   "entrypoints": [
-    "static/css/main.204aa24e.css",
+    "static/css/main.369bea17.css",
     "static/js/main.5138c72e.js"
   ]
 }
